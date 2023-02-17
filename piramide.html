@@ -9,15 +9,19 @@
 </head>
 
 <body>
-    <script>
-        begin = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-        result = [];
-        document.write("array: " + begin + "<br>");
-        for (x = 0; x <= (begin.length - 1); x++) {
-            result[x] = begin[x]
-            document.write(result.toString().replaceAll(/,* */g, "") + "<br>");
-        }
+    <input type="text" name="begin" id="begin"><br>
+    <input type="button" onclick="piramide()" value="Submit">
 
+    <script>
+        function piramide() {
+            let begin = document.getElementById("begin").value;
+            result = [];
+            for (x = 1; x <= begin; x++) {
+                result[x] = x;
+                // result[x] = begin[x]
+                document.write(result.toString().replaceAll(/,* */g, "") + "<br>");
+            }
+        }
     </script>
 </body>
 
